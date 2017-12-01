@@ -9,3 +9,14 @@ C:\Users\pwe8fe\Documents\Visual Studio 2017\Projects\MyFirstIdentityServer\MyFi
 C:\Users\pwe8fe\Documents\Visual Studio 2017\Projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.dll
 C:\Users\pwe8fe\Documents\Visual Studio 2017\Projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.pdb
 C:\Users\pwe8fe\Documents\Visual Studio 2017\Projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.csprojResolveAssemblyReference.cache
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\bin\Debug\netcoreapp2.0\MyFirstIdentityServer.deps.json
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\bin\Debug\netcoreapp2.0\MyFirstIdentityServer.runtimeconfig.json
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\bin\Debug\netcoreapp2.0\MyFirstIdentityServer.runtimeconfig.dev.json
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\bin\Debug\netcoreapp2.0\MyFirstIdentityServer.dll
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\bin\Debug\netcoreapp2.0\MyFirstIdentityServer.pdb
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.csprojResolveAssemblyReference.cache
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.csproj.CoreCompileInputs.cache
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.AssemblyInfoInputs.cache
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.AssemblyInfo.cs
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.dll
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\MyFirstIdentityServer\MyFirstIdentityServer\obj\Debug\netcoreapp2.0\MyFirstIdentityServer.pdb

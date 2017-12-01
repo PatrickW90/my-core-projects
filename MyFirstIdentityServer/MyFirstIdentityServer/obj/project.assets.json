@@ -12594,11 +12594,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\pwe8fe\\Documents\\Visual Studio 2017\\Projects\\MyFirstIdentityServer\\MyFirstIdentityServer\\MyFirstIdentityServer.csproj",
+      "projectUniqueName": "C:\\Users\\pwe8fe\\Documents\\Development\\privat_repos\\my-core-projects\\MyFirstIdentityServer\\MyFirstIdentityServer\\MyFirstIdentityServer.csproj",
       "projectName": "MyFirstIdentityServer",
-      "projectPath": "C:\\Users\\pwe8fe\\Documents\\Visual Studio 2017\\Projects\\MyFirstIdentityServer\\MyFirstIdentityServer\\MyFirstIdentityServer.csproj",
+      "projectPath": "C:\\Users\\pwe8fe\\Documents\\Development\\privat_repos\\my-core-projects\\MyFirstIdentityServer\\MyFirstIdentityServer\\MyFirstIdentityServer.csproj",
       "packagesPath": "C:\\Users\\pwe8fe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pwe8fe\\Documents\\Visual Studio 2017\\Projects\\MyFirstIdentityServer\\MyFirstIdentityServer\\obj\\",
+      "outputPath": "C:\\Users\\pwe8fe\\Documents\\Development\\privat_repos\\my-core-projects\\MyFirstIdentityServer\\MyFirstIdentityServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

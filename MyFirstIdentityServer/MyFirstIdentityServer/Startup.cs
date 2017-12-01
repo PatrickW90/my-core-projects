@@ -18,11 +18,12 @@ namespace MyFirstIdentityServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentityServer()
-                .AddInMemoryClients(new List<Client>())
-                .AddInMemoryIdentityResources(new List<IdentityResource>())
-                .AddInMemoryApiResources(new List<ApiResource>())
-                .AddTestUsers(new List<TestUser>())
+                .AddInMemoryClients(Clients.GetClients())
+                .AddInMemoryIdentityResources(Resources.GetIdentityResource())
+                .AddInMemoryApiResources(Resources.GetApiResources())
+                .AddTestUsers(Users.Get())
                 .AddDeveloperSigningCredential();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
