@@ -18,8 +18,8 @@ namespace AntMe.Player.PatricksAmeisen
     /// </summary>
     [Spieler(
         Volkname = "PatricksAmeisen",   // Hier kannst du den Namen des Volkes festlegen
-        Vorname = "",       // An dieser Stelle kannst du dich als Schöpfer der Ameise eintragen
-        Nachname = ""       // An dieser Stelle kannst du dich als Schöpfer der Ameise eintragen
+        Vorname = "Patrick",       // An dieser Stelle kannst du dich als Schöpfer der Ameise eintragen
+        Nachname = "Weiss"       // An dieser Stelle kannst du dich als Schöpfer der Ameise eintragen
     )]
 
     /// Kasten stellen "Berufsgruppen" innerhalb deines Ameisenvolkes dar. Du kannst hier mit
@@ -64,6 +64,7 @@ namespace AntMe.Player.PatricksAmeisen
         /// </summary>
         public override void Wartet()
         {
+            GeheGeradeaus();
         }
 
         /// <summary>
@@ -107,6 +108,7 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="obst">Das gesichtete Stück Obst</param>
         public override void Sieht(Obst obst)
         {
+            GeheZuZiel(obst);
         }
 
         /// <summary>
@@ -117,6 +119,10 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="zucker">Der gesichtete Zuckerhügel</param>
         public override void Sieht(Zucker zucker)
         {
+            if (Ziel == null)
+            {
+                GeheZuZiel(zucker);
+            }
         }
 
         /// <summary>
@@ -128,6 +134,8 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="obst">Das erreichte Stück Obst</param>
         public override void ZielErreicht(Obst obst)
         {
+            Nimm(obst);
+            GeheZuBau();
         }
 
         /// <summary>
@@ -139,6 +147,8 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="zucker">Der erreichte Zuckerhügel</param>
         public override void ZielErreicht(Zucker zucker)
         {
+            Nimm(zucker);
+            GeheZuBau();
         }
 
         #endregion

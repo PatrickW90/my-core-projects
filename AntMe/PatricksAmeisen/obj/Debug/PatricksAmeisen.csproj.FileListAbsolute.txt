@@ -1,0 +1,12 @@
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.Player.PatricksAmeisen.dll
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.Player.PatricksAmeisen.pdb
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.SharedComponents.dll
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.Simulation.dll
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.SharedComponents.xml
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.Simulation.xml
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\de\AntMe.SharedComponents.resources.dll
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\de\AntMe.Simulation.resources.dll
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\obj\Debug\PatricksAmeisen.csprojResolveAssemblyReference.cache
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\obj\Debug\PatricksAmeisen.csproj.CoreCompileInputs.cache
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\obj\Debug\AntMe.Player.PatricksAmeisen.dll
+C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\obj\Debug\AntMe.Player.PatricksAmeisen.pdb
