@@ -26,14 +26,34 @@ namespace AntMe.Player.PatricksAmeisen
     /// den Fähigkeiten einzelner Ameisen arbeiten. Wie genau das funktioniert kannst du der 
     /// Lektion zur Spezialisierung von Ameisen entnehmen (http://wiki.antme.net/de/Lektion7).
     [Kaste(
-        Name = "Standard",                  // Name der Berufsgruppe
-        AngriffModifikator = 0,             // Angriffsstärke einer Ameise
-        DrehgeschwindigkeitModifikator = 0, // Drehgeschwindigkeit einer Ameise
-        EnergieModifikator = 0,             // Lebensenergie einer Ameise
+        Name = "Kämpfer",                  // Name der Berufsgruppe
+        AngriffModifikator = 2,             // Angriffsstärke einer Ameise
+        DrehgeschwindigkeitModifikator = -1, // Drehgeschwindigkeit einer Ameise
+        EnergieModifikator = 2,             // Lebensenergie einer Ameise
         GeschwindigkeitModifikator = 0,     // Laufgeschwindigkeit einer Ameise
-        LastModifikator = 0,                // Tragkraft einer Ameise
+        LastModifikator = -1,                // Tragkraft einer Ameise
+        ReichweiteModifikator = -1,          // Ausdauer einer Ameise
+        SichtweiteModifikator = -1           // Sichtweite einer Ameise
+    )]
+    [Kaste(
+        Name = "Sammler",                  // Name der Berufsgruppe
+        AngriffModifikator = -1,             // Angriffsstärke einer Ameise
+        DrehgeschwindigkeitModifikator = 0, // Drehgeschwindigkeit einer Ameise
+        EnergieModifikator = -1,             // Lebensenergie einer Ameise
+        GeschwindigkeitModifikator = 0,     // Laufgeschwindigkeit einer Ameise
+        LastModifikator = 2,                // Tragkraft einer Ameise
         ReichweiteModifikator = 0,          // Ausdauer einer Ameise
         SichtweiteModifikator = 0           // Sichtweite einer Ameise
+    )]
+    [Kaste(
+        Name = "Späher",                  // Name der Berufsgruppe
+        AngriffModifikator = -1,             // Angriffsstärke einer Ameise
+        DrehgeschwindigkeitModifikator = 0, // Drehgeschwindigkeit einer Ameise
+        EnergieModifikator = -1,             // Lebensenergie einer Ameise
+        GeschwindigkeitModifikator = 0,     // Laufgeschwindigkeit einer Ameise
+        LastModifikator = -1,                // Tragkraft einer Ameise
+        ReichweiteModifikator = 1,          // Ausdauer einer Ameise
+        SichtweiteModifikator = 2           // Sichtweite einer Ameise
     )]
     public class PatricksAmeisenKlasse : Basisameise
     {
@@ -50,7 +70,12 @@ namespace AntMe.Player.PatricksAmeisen
         public override string BestimmeKaste(Dictionary<string, int> anzahl)
         {
             // Gibt den Namen der betroffenen Kaste zurück.
-            return "Standard";
+            if (anzahl["Sammler"] < 20)
+                return "Sammler";
+            else if (anzahl["Späher"] < 10)
+                return "Späher";
+            else
+                return "Kämpfer";
         }
 
         #endregion
@@ -94,6 +119,10 @@ namespace AntMe.Player.PatricksAmeisen
         /// </summary>
         public override void Tick()
         {
+            if(Reichweite - ZurückgelegteStrecke -20 < EntfernungZuBau)
+            {
+                GeheZuBau();
+            }
         }
 
         #endregion
@@ -108,7 +137,14 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="obst">Das gesichtete Stück Obst</param>
         public override void Sieht(Obst obst)
         {
-            GeheZuZiel(obst);
+            if (BrauchtNochTräger(obst))
+            {
+                SprüheMarkierung(0, 100);
+                if ((Kaste == "Sammler" && Ziel == null) || (Kaste == "Späher" && Ziel == null))
+                {
+                    GeheZuZiel(obst);
+                }
+            }
         }
 
         /// <summary>
@@ -119,7 +155,8 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="zucker">Der gesichtete Zuckerhügel</param>
         public override void Sieht(Zucker zucker)
         {
-            if (Ziel == null)
+            SprüheMarkierung(0, 100);
+            if ((Kaste == "Sammler" && Ziel == null) || (Kaste == "Späher" && Ziel == null))
             {
                 GeheZuZiel(zucker);
             }
@@ -134,9 +171,19 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="obst">Das erreichte Stück Obst</param>
         public override void ZielErreicht(Obst obst)
         {
-            Nimm(obst);
-            GeheZuBau();
+            if (Kaste == "Sammler")
+            {
+                Nimm(obst);
+                GeheZuBau();
+            }
+            else if (Kaste == "Späher")
+            {
+                BleibStehen();
+                SprüheMarkierung(0, 300);
+
+            }
         }
+
 
         /// <summary>
         /// Hat die Ameise eine Zuckerhügel als Ziel festgelegt, wird diese Methode aufgerufen, 
@@ -147,8 +194,17 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="zucker">Der erreichte Zuckerhügel</param>
         public override void ZielErreicht(Zucker zucker)
         {
-            Nimm(zucker);
-            GeheZuBau();
+            if (Kaste == "Sammler")
+            {
+                Nimm(zucker);
+                GeheZuBau();
+            }
+            else if (Kaste == "Späher")
+            {
+                BleibStehen();
+                SprüheMarkierung(0, 300);
+
+            }
         }
 
         #endregion
@@ -164,6 +220,13 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="markierung">Die gerochene Markierung</param>
         public override void RiechtFreund(Markierung markierung)
         {
+            if ((markierung.Information == 0 && Kaste == "Sammler") || (markierung.Information == 0 && Kaste == "Späher") || (markierung.Information == 1 && Kaste == "Kämpfer"))
+            {
+                if (Ziel == null)
+                {
+                    GeheZuZiel(markierung);
+                }
+            }
         }
 
         /// <summary>
@@ -211,6 +274,11 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="wanze">Erspähte Wanze</param>
         public override void SiehtFeind(Wanze wanze)
         {
+            SprüheMarkierung(1, 100);
+            if (Ziel == null)
+            {
+                GreifeAn(wanze);
+            }
         }
 
         /// <summary>
