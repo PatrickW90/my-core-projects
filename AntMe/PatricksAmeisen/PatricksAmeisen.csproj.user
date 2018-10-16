@@ -8,7 +8,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files (x86)\AntMe 1.7\AntMe.exe</StartProgram>
-    <StartArguments>/file="C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.Player.PatricksAmeisen.dll"</StartArguments>
+    <StartArguments>PATH=%25PATH%25%3b%24%28ProjectDir%29\PatricksAmeisen\bin\AntMe.Player.PatricksAmeisen.dll"</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <StartProgram>C:\Program Files %28x86%29\AntMe 1.7\AntMe.exe</StartProgram>
@@ -29,5 +29,9 @@
     <StartProgram>C:\Program Files %28x86%29\AntMe 1.7\AntMe.exe</StartProgram>
     <StartArguments>/file="C:\Users\pwe8fe\Documents\Development\privat_repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.Player.PatricksAmeisen.dll"</StartArguments>
     <StartAction>Program</StartAction>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>
+    </ReferencePath>
   </PropertyGroup>
 </Project>
