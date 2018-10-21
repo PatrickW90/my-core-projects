@@ -173,13 +173,20 @@ namespace AntMe.Player.PatricksAmeisen
         {
             if (Kaste == "Sammler")
             {
-                Nimm(obst);
+                if (AktuelleLast < MaximaleLast)
+                {
+                    Nimm(obst);
+                }   
                 GeheZuBau();
+                SprüheMarkierung(0, 100);
+
+
+
             }
             else if (Kaste == "Späher")
             {
                 BleibStehen();
-                SprüheMarkierung(0, 300);
+                //SprüheMarkierung(0, 300);
 
             }
         }
@@ -202,7 +209,7 @@ namespace AntMe.Player.PatricksAmeisen
             else if (Kaste == "Späher")
             {
                 BleibStehen();
-                SprüheMarkierung(0, 300);
+                //SprüheMarkierung(0, 300);
 
             }
         }
@@ -275,7 +282,7 @@ namespace AntMe.Player.PatricksAmeisen
         public override void SiehtFeind(Wanze wanze)
         {
             SprüheMarkierung(1, 100);
-            if (Ziel == null)
+            if ((Kaste == "Kämpfer" && Ziel == null))
             {
                 GreifeAn(wanze);
             }
@@ -301,6 +308,7 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="wanze">Angreifende Wanze</param>
         public override void WirdAngegriffen(Wanze wanze)
         {
+            SprüheMarkierung(1, 300);
         }
 
         #endregion
