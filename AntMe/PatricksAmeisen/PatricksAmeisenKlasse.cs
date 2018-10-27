@@ -70,7 +70,7 @@ namespace AntMe.Player.PatricksAmeisen
         public override string BestimmeKaste(Dictionary<string, int> anzahl)
         {
             // Gibt den Namen der betroffenen Kaste zurück.
-            if (anzahl["Sammler"] < 20)
+            if (anzahl["Sammler"] < 40)
                 return "Sammler";
             else if (anzahl["Späher"] < 10)
                 return "Späher";
@@ -258,6 +258,12 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="ameise">Erspähte befreundete Ameise</param>
         public override void SiehtFreund(Ameise ameise)
         {
+            if(Kaste == "Sammler" && Ziel == null && AktuelleLast == 0)
+            {
+                DreheZuZiel(ameise);
+                //GeheGeradeaus();
+                GeheZuZiel(ameise);
+            }
         }
 
         /// <summary>
