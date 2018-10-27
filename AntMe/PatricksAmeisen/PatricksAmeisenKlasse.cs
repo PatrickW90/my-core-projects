@@ -57,6 +57,8 @@ namespace AntMe.Player.PatricksAmeisen
     )]
     public class PatricksAmeisenKlasse : Basisameise
     {
+        public Spielobjekt aktuellesZiel;
+
         #region Kasten
 
         /// <summary>
@@ -129,6 +131,8 @@ namespace AntMe.Player.PatricksAmeisen
                 SprüheMarkierung(Richtung + 180, 0);
                 Denke("Wo ich herkomme gibt's Fressen!!");
             }
+
+            aktuellesZiel = Ziel;
         }
 
         #endregion
@@ -258,7 +262,7 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="ameise">Erspähte befreundete Ameise</param>
         public override void SiehtFreund(Ameise ameise)
         {
-            if(Kaste == "Sammler" && Ziel == null && AktuelleLast == 0)
+            if(Kaste == "Sammler" && Ziel == null && AktuelleLast == 0) 
             {
                 DreheZuZiel(ameise);
                 //GeheGeradeaus();
