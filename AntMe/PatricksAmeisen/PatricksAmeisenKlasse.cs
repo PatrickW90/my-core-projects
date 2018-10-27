@@ -123,6 +123,12 @@ namespace AntMe.Player.PatricksAmeisen
             {
                 GeheZuBau();
             }
+
+            if(AktuelleLast > 0 && GetragenesObst == null)
+            {
+                SprüheMarkierung(Richtung + 180, 0);
+                Denke("Wo ich herkomme gibt's Fressen!!");
+            }
         }
 
         #endregion
@@ -139,7 +145,7 @@ namespace AntMe.Player.PatricksAmeisen
         {
             if (BrauchtNochTräger(obst))
             {
-                SprüheMarkierung(0, 100);
+                SprüheMarkierung(1000, 100);
                 if ((Kaste == "Sammler" && Ziel == null) || (Kaste == "Späher" && Ziel == null))
                 {
                     GeheZuZiel(obst);
@@ -155,7 +161,7 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="zucker">Der gesichtete Zuckerhügel</param>
         public override void Sieht(Zucker zucker)
         {
-            SprüheMarkierung(0, 100);
+            SprüheMarkierung(1000, 100);
             if ((Kaste == "Sammler" && Ziel == null) || (Kaste == "Späher" && Ziel == null))
             {
                 GeheZuZiel(zucker);
@@ -173,20 +179,16 @@ namespace AntMe.Player.PatricksAmeisen
         {
             if (Kaste == "Sammler")
             {
-                if (AktuelleLast < MaximaleLast)
-                {
-                    Nimm(obst);
-                }   
+                Nimm(obst); 
                 GeheZuBau();
-                SprüheMarkierung(0, 100);
-
-
 
             }
             else if (Kaste == "Späher")
             {
-                BleibStehen();
-                //SprüheMarkierung(0, 300);
+                Nimm(obst);
+                GeheZuBau();
+                SprüheMarkierung(1000, 300);
+                Denke("Hier gibt's Fressen!!");
 
             }
         }
@@ -209,7 +211,8 @@ namespace AntMe.Player.PatricksAmeisen
             else if (Kaste == "Späher")
             {
                 BleibStehen();
-                //SprüheMarkierung(0, 300);
+                SprüheMarkierung(1000, 300);
+                Denke("Hier gibt's Fressen!!");
 
             }
         }
@@ -227,11 +230,21 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="markierung">Die gerochene Markierung</param>
         public override void RiechtFreund(Markierung markierung)
         {
-            if ((markierung.Information == 0 && Kaste == "Sammler") || (markierung.Information == 0 && Kaste == "Späher") || (markierung.Information == 1 && Kaste == "Kämpfer"))
+            if ((markierung.Information == 1000 && Kaste == "Sammler") || (markierung.Information == 1000 && Kaste == "Späher") || (markierung.Information == 1001 && Kaste == "Kämpfer"))
             {
                 if (Ziel == null)
                 {
                     GeheZuZiel(markierung);
+                }
+            }
+
+            if(markierung.Information < 1000 && Kaste == "Sammler")
+            {
+                if(Ziel == null)
+                {
+                    DreheInRichtung(markierung.Information);
+                    GeheGeradeaus();
+                    Denke("Gehe zu Fressen");
                 }
             }
         }
@@ -271,6 +284,12 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="ameise">Erspähte feindliche Ameise</param>
         public override void SiehtFeind(Ameise ameise)
         {
+            SprüheMarkierung(1001, 300);
+            if ((Kaste == "Kämpfer" && Ziel == null))
+            {
+                GreifeAn(ameise);
+                Denke("Greife fremde Ameise an");
+            }
         }
 
         /// <summary>
@@ -281,10 +300,11 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="wanze">Erspähte Wanze</param>
         public override void SiehtFeind(Wanze wanze)
         {
-            SprüheMarkierung(1, 100);
+            SprüheMarkierung(1001, 300);
             if ((Kaste == "Kämpfer" && Ziel == null))
             {
                 GreifeAn(wanze);
+                Denke("Greife Wanze an");
             }
         }
 
@@ -297,6 +317,8 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="ameise">Angreifende Ameise</param>
         public override void WirdAngegriffen(Ameise ameise)
         {
+            Denke("Ich werde von fremder Ameise angegriffen; Hilfe!!!!");
+            //SprüheMarkierung(1, 300)
         }
 
         /// <summary>
@@ -308,7 +330,8 @@ namespace AntMe.Player.PatricksAmeisen
         /// <param name="wanze">Angreifende Wanze</param>
         public override void WirdAngegriffen(Wanze wanze)
         {
-            SprüheMarkierung(1, 300);
+            Denke("Ich werde von Wanze angegriffen; Hilfe!!!!");
+            //SprüheMarkierung(1, 300);
         }
 
         #endregion

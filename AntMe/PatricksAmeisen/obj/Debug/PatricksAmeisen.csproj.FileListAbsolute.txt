@@ -16,7 +16,6 @@ C:\Users\patrickw_mac\Source\Repos\my-core-projects\AntMe\PatricksAmeisen\bin\An
 C:\Users\patrickw_mac\Source\Repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.Simulation.xml
 C:\Users\patrickw_mac\Source\Repos\my-core-projects\AntMe\PatricksAmeisen\bin\de\AntMe.SharedComponents.resources.dll
 C:\Users\patrickw_mac\Source\Repos\my-core-projects\AntMe\PatricksAmeisen\bin\de\AntMe.Simulation.resources.dll
-C:\Users\patrickw_mac\Source\Repos\my-core-projects\AntMe\PatricksAmeisen\obj\Debug\PatricksAmeisen.csprojResolveAssemblyReference.cache
 C:\Users\patrickw_mac\Source\Repos\my-core-projects\AntMe\PatricksAmeisen\obj\Debug\AntMe.Player.PatricksAmeisen.dll
 C:\Users\patrickw_mac\Source\Repos\my-core-projects\AntMe\PatricksAmeisen\obj\Debug\AntMe.Player.PatricksAmeisen.pdb
 C:\Users\patrickw_mac\Source\Repos\my-core-projects\AntMe\PatricksAmeisen\bin\AntMe.SharedComponents.dll
