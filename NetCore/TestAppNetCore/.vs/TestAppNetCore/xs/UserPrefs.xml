@@ -1,19 +1,18 @@
 ﻿<Properties StartupConfiguration="{0227530F-03F3-4F36-9497-C323238C8D46}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestAppNetCore/Views/Home/Profile.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestAppNetCore/Controllers/HomeController.cs">
     <Files>
       <File FileName="TestAppNetCore/Controllers/HomeController.cs" Line="18" Column="27" />
-      <File FileName="TestAppNetCore/Views/Home/Profile.cshtml" Line="8" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TestAppNetCore" expanded="True">
             <Node name="TestAppNetCore" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True">
-                  <Node name="Profile.cshtml" selected="True" />
-                </Node>
+                <Node name="Home" expanded="True" />
               </Node>
             </Node>
           </Node>
