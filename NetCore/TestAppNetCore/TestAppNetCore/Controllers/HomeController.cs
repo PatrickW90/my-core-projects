@@ -15,6 +15,8 @@ namespace TestAppNetCore.Controllers
 
         public IActionResult Profile()
         {
+            ViewData["Message"] = "Your Profile page.";
+
             return View();
         }
 
