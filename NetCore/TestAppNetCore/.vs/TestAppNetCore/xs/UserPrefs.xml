@@ -1,30 +1,27 @@
-﻿<Properties StartupConfiguration="{0227530F-03F3-4F36-9497-C323238C8D46}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestAppNetCore/Startup.cs">
+﻿<Properties StartupConfiguration="{0FE53B2B-3CE7-4039-AB90-9125E8834DDF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestAppNetCore/Dockerfile">
     <Files>
       <File FileName="TestAppNetCore/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="TestAppNetCore/Controllers/HelloWorldController.cs" Line="27" Column="10" />
-      <File FileName="TestAppNetCore/Startup.cs" Line="1" Column="1" />
+      <File FileName="TestAppNetCore/Controllers/HelloWorldController.cs" Line="41" Column="1" />
+      <File FileName="TestAppNetCore/Dockerfile" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="TestAppNetCore" expanded="True">
-            <Node name="TestAppNetCore" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
-              <Node name="Startup.cs" selected="True" />
-            </Node>
+          <Node name="testappnetcore" expanded="True" selected="True">
+            <Node name="TestAppNetCore" expanded="True" />
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.TestAppNetCore PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.testappnetcore PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

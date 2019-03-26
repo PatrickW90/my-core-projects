@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  testappnetcore:
+    image: ${DOCKER_REGISTRY-}testappnetcore
+    build:
+      context: .
+      dockerfile: TestAppNetCore/Dockerfile
