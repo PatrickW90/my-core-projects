@@ -5,4 +5,4 @@ services:
     image: ${DOCKER_REGISTRY-}testappnetcore
     build:
       context: .
-      dockerfile: TestAppNetCore/Dockerfile
+      dockerfile: testappnetcore/Dockerfile

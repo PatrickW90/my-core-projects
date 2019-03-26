@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testappnetcore", "TestAppNetCore\TestAppNetCore.csproj", "{0227530F-03F3-4F36-9497-C323238C8D46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testappnetcore", "testappnetcore\testappnetcore.csproj", "{0227530F-03F3-4F36-9497-C323238C8D46}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0FE53B2B-3CE7-4039-AB90-9125E8834DDF}"
 EndProject

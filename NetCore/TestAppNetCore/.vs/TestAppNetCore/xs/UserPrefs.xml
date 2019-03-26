@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{0FE53B2B-3CE7-4039-AB90-9125E8834DDF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestAppNetCore/Dockerfile">
+  <MonoDevelop.Ide.Workbench ActiveDocument="testappnetcore/appsettings.Development.json">
     <Files>
-      <File FileName="TestAppNetCore/Dockerfile" Line="19" Column="35" />
+      <File FileName="testappnetcore/appsettings.json" Line="1" Column="1" />
+      <File FileName="testappnetcore/appsettings.Development.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="testappnetcore" expanded="True">
+            <Node name="docker-compose" expanded="True" />
             <Node name="testappnetcore" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Dockerfile" selected="True" />
+              <Node name="appsettings.Development.json" selected="True" />
             </Node>
           </Node>
         </State>
