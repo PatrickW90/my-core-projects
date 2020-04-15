@@ -18,10 +18,10 @@ namespace MyFirstIdentityServer
                 {
                     SubjectId = "5BE86359-073C-434B-AD2D-A3932222DABE",
                     Username = "patrick",
-                    Password = "Start1234!",
+                    Password = "TopSecret4Test",
                     Claims = new List<Claim>
                     {
-                        new Claim(JwtClaimTypes.Email, "patrick@bosch.com"),
+                        new Claim(JwtClaimTypes.Email, "patrick@test.com"),
                         new Claim(JwtClaimTypes.Role, "admin")
                     }
 
